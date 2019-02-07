@@ -1,5 +1,7 @@
 package ptr
 
+import "time"
+
 func Int(i *int) int {
 	return *i
 }
@@ -62,4 +64,8 @@ func Complex64(c *complex64) complex64 {
 
 func Complex128(c *complex128) complex128 {
 	return *c
+}
+
+func Time(t *time.Time) time.Time {
+	return *t
 }

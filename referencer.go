@@ -1,5 +1,7 @@
 package ptr
 
+import "time"
+
 func IntPtr(i int) *int {
 	return &i
 }
@@ -62,4 +64,8 @@ func Complex64Ptr(c complex64) *complex64 {
 
 func Complex128Ptr(c complex128) *complex128 {
 	return &c
+}
+
+func TimePtr(t time.Time) *time.Time {
+	return &t
 }

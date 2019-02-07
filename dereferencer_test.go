@@ -1,6 +1,9 @@
 package ptr
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestInt(t *testing.T) {
 	var testData = int(12)
@@ -127,5 +130,13 @@ func TestComplex128(t *testing.T) {
 	resultData := Complex128(&testData)
 	if resultData != testData {
 		t.Errorf("Test data should be %f, instead of %f", testData, resultData)
+	}
+}
+
+func TestTime(t *testing.T) {
+	var current = time.Now()
+	resultData := Time(&current)
+	if resultData != current {
+		t.Errorf("Test data should be %v, instead of %v", current, resultData)
 	}
 }
